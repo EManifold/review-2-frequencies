@@ -1,13 +1,15 @@
 class Frequency
-
   def update_frequency(input, lower_limit, upper_limit)
-    if input == [20]
-      [40]
-    elsif input == [20, 30]
-      [40, 40]
-    else
-      input
+    new_inputs = input.map do |num|
+      if num < lower_limit
+        lower_limit
+      elsif num > upper_limit
+        upper_limit
+      else
+        num
+      end
     end
-  end
 
+    return new_inputs
+  end
 end
