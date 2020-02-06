@@ -13,5 +13,9 @@ describe Frequency do
     it "should return each frequency when they're both within the limits" do
       expect(subject.update_frequency([50, 60], 40, 80)).to eq [50, 60]
     end
+
+    it "should return the limit closest to the frequency when the frequency is not within the limits" do
+      expect(subject.update_frequency([20], 40, 80)).to eq [40]
+    end
   end
 end
