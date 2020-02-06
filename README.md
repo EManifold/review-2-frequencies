@@ -8,7 +8,7 @@ upper=limit=80, lower_limit=40, [60, 100] => [60, 80]
 
 ([60], 40, 80)
 
-Frequency.update(inputted_frequency)
+Frequency.update_frequency(input)
 
 Class Frequency
 Method Update
